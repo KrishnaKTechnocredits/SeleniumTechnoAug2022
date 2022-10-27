@@ -1,4 +1,4 @@
-package SwapnilMaheshwari;
+package SwapnilMaheshwari.Assignment1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
