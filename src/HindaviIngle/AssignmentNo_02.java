@@ -39,13 +39,13 @@ public class AssignmentNo_02 {
 		String expectedMsg = "You successfully clicked on it";
 		Alert alert = driver.switchTo().alert();
 		String actualMsg = alert.getText();
+		System.out.println("STEP 6-Validate message");
 		if (expectedMsg.equals(actualMsg)) {
-			System.out.println("pass");
+			System.out.println("Actual and expected alert message is matching");
 		} else {
-			System.out.println("fail");
+			System.out.println("Actual and expected alert message is not matching");
 
 		}
-
 		alert.accept();
 		driver.close();
 	}
