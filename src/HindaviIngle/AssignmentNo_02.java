@@ -35,7 +35,6 @@ public class AssignmentNo_02 {
 		driver.findElement(By.id("pwd")).sendKeys("123456");
 		System.out.println("STEP 5-Click on the submit button");
 		driver.findElement(By.id("submitb2")).click();
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		Thread.sleep(3000);
 		String expectedMsg = "You successfully clicked on it";
 		Alert alert = driver.switchTo().alert();
