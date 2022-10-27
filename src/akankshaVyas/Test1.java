@@ -72,7 +72,7 @@ public class Test1 {
 		if(expectedAlertMsg.equals(actualAlertMsg))
 			System.out.println("Test Pass");
 		else
-			System.out.println("Test Fail");
+			System.out.println("  Test Fail ");
 		alert.accept();// Accepting alert msg
 		driver.quit();
 	}
