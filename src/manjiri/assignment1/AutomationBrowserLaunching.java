@@ -3,10 +3,11 @@ package manjiri.assignment1;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import manjiri.base.PredefinedActions;
 
 public class AutomationBrowserLaunching {
 	public static void main(String[] args) {
-		WebDriver driver = PredefinedActions.start("file:///D:/TechnoCredits/Projects/SeleniumTechnoAug2022/drivers/FIrstProgram.html");
+		WebDriver driver = PredefinedActions.start("file:///D:/TechnoCredits/Projects/SeleniumTechnoAug2022/src/manjiri/pages/FIrstProgram.html");
 		driver.findElement(By.id("firstname")).sendKeys("Manjiri");
 		driver.findElement(By.id("lastname")).sendKeys("Chourikar");
 		driver.findElement(By.id("female")).click();
