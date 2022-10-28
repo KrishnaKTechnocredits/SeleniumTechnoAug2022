@@ -14,7 +14,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import manjiri.assignment1.PredefinedActions;
+import manjiri.base.PredefinedActions;
 
 public class HandlingAlertPopup {
 	public static void main(String[] args) throws InterruptedException {
