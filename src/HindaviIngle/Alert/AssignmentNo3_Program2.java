@@ -4,8 +4,7 @@
  * Step2 :Click on Basic element
  * Step3 : Click on Javascript confirmation button. 
  */
- 
- 
+
 package HindaviIngle.Alert;
 
 import org.openqa.selenium.Alert;
@@ -25,29 +24,29 @@ public class AssignmentNo3_Program2 {
 		Thread.sleep(2000);
 		System.out.println("STEP2 -Click on Alert button");
 		driver.findElement(By.id("javascriptConfirmBox")).click();
-		
+
 		System.out.println("STEP3 -Switch to Alert");
 
-		Alert alert=driver.switchTo().alert();
-		Thread.sleep(3000);		
-		
+		Alert alert = driver.switchTo().alert();
+		Thread.sleep(3000);
+
 		System.out.println("STEP4 -Click on OK button on alert");
 
 		alert.accept();
-		
-		String actualText=driver.findElement(By.xpath("//p[@id='pgraphdemo']")).getText();
-		String expectedText="You pressed OK!";
-		
+
+		String actualText = driver.findElement(By.xpath("//p[@id='pgraphdemo']")).getText();
+		String expectedText = "You pressed OK!";
+
 		System.out.println("STEP5 -Verify text on page");
 
-		if(actualText.equals(expectedText)) {
-			System.out.println("Actual and Expected Alert text is matching");		
-		}else {
-			System.out.println("Actual and Expected Alert text is not matching");		
+		if (actualText.equals(expectedText)) {
+			System.out.println("Actual and Expected Alert text is matching");
+		} else {
+			System.out.println("Actual and Expected Alert text is not matching");
 
 		}
-			driver.close();
-		
+		driver.close();
+
 	}
 
 }

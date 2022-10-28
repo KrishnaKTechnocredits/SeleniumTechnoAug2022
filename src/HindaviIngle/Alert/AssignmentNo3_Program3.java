@@ -24,21 +24,23 @@ public class AssignmentNo3_Program3 {
 		Thread.sleep(2000);
 		System.out.println("STEP2 -Click on Alert button");
 		driver.findElement(By.id("javascriptPromp")).click();
-		
+
 		System.out.println("STEP3 -Switch to Alert");
 
-		Alert alert=driver.switchTo().alert();
-		Thread.sleep(3000);	
-		String input="test";
+		Alert alert = driver.switchTo().alert();
+		Thread.sleep(3000);
+		String input = "Hindavi";
 		alert.sendKeys(input);
 		alert.accept();
-		
-		String actualText=driver.findElement(By.id("pgraphdemo")).getText();
-		if(actualText.contains("test")) {
+		System.out.println("STEP4 -Verify input given in text");
+
+		String actualText = driver.findElement(By.id("pgraphdemo")).getText();
+		if (actualText.contains(input)) {
 			System.out.println("Its correct");
+		} else {
+			System.out.println("Fail");
 		}
-		
-		
+		driver.close();
 	}
 
 }
