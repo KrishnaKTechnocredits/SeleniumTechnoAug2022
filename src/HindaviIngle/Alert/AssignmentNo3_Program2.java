@@ -1,8 +1,9 @@
 /*
  * 
  * Step1 : Hit url http://automationbykrishna.com/#
- * Step2 :Click on Basic element
+ * Step2 : Click on Basic element
  * Step3 : Click on Javascript confirmation button. 
+ * Step 4:Verify text on Alert
  */
 
 package HindaviIngle.Alert;
@@ -37,7 +38,7 @@ public class AssignmentNo3_Program2 {
 		String actualText = driver.findElement(By.xpath("//p[@id='pgraphdemo']")).getText();
 		String expectedText = "You pressed OK!";
 
-		System.out.println("STEP5 -Verify text on page");
+		System.out.println("STEP5 -Verify text on Alert");
 
 		if (actualText.equals(expectedText)) {
 			System.out.println("Actual and Expected Alert text is matching");

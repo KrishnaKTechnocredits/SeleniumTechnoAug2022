@@ -3,7 +3,7 @@
  * Step2 :Click on Basic element
  * Step3 : Click on Javascript prompt button.
  * Step4: Click ok button
- * Step5: Verify text after clicked on ok button
+ * Step5: Verify dynamic text after clicked on ok button
  */
 package HindaviIngle.Alert;
 
@@ -32,7 +32,7 @@ public class AssignmentNo3_Program3 {
 		String input = "Hindavi";
 		alert.sendKeys(input);
 		alert.accept();
-		System.out.println("STEP4 -Verify input given in text");
+		System.out.println("STEP4 -Verify dynamic input given in text");
 
 		String actualText = driver.findElement(By.id("pgraphdemo")).getText();
 		if (actualText.contains(input)) {
