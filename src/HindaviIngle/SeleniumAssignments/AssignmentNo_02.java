@@ -10,7 +10,7 @@
 7. Validate that "You successfully clicked on it" message is displayed
 8. Accept the alert
  */
-package HindaviIngle;
+package HindaviIngle.SeleniumAssignments;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
