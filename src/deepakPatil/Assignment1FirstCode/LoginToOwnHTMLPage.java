@@ -21,6 +21,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import deepakPatil.Base.PredefinedActions;
+
 public class LoginToOwnHTMLPage {
 	
 	static void verifyPageLoadedCorrectly(String PageTitle, String expectedTitle) {
@@ -32,13 +34,7 @@ public class LoginToOwnHTMLPage {
 	
 	public static void main(String[] args) {
 		
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_106.exe");
-		System.out.println("1.Launch Chrome Browser");
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		
-		System.out.println("2.Hit url(html page created)in browser");
-		driver.get("file:///C:/Users/DELL/Desktop/Sample%20Form.html");
+		WebDriver driver = PredefinedActions.start("file:///C:/Users/DELL/Desktop/Sample%20Form.html");
 		
 		System.out.println("3.Verify application is loaded successfully.");
 		String expectedTitle="TechnoCredits Sample HTML Page";
