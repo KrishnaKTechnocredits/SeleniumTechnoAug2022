@@ -12,20 +12,19 @@ Test Case: To Handle Alert & Validate that "You successfully clicked on it" mess
 8. Accept the alert
  */
 
-package deepakPatil.Assignment2AlertHandle;
+package deepakPatil.Assignment2AlertHandle1;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class AlertHandle {
+import deepakPatil.Base.PredefinedActions;
+
+public class AlertHandle1 {
 	
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","drivers/chromedriver_106.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("http://automationbykrishna.com");
+		WebDriver driver= PredefinedActions.start("http://automationbykrishna.com/");
+		
 		driver.findElement(By.id("basicelements")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.id("exampleInputEmail1")).sendKeys("testemail@gmail.com");
