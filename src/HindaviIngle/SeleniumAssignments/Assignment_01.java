@@ -1,4 +1,5 @@
-package HindaviIngle;
+
+package HindaviIngle.SeleniumAssignments;
 
 
 /*
@@ -29,7 +30,7 @@ public class Assignment_01 {
 		System.out.println("Step 1: Launch Browser");
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_106.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("file:///D:/TechnoCredit/selenuim/FirstProgram.html#section1");
+		driver.get("D:\\TechnoCredit\\workspace\\Selenium_Oct22\\SeleniumTechnoAug2022\\src\\HindaviIngle\\Pages\\FirstProgram.html");
 		driver.manage().window().maximize();
 		System.out.println("Step 2: Validate page loaded successfully or not");
 		String expectedTitle = "Welcome to the page!";
