@@ -1,6 +1,8 @@
 package shubhamGupta.base;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class PredefinedActions {
@@ -20,7 +22,7 @@ public class PredefinedActions {
 
 	}
 
-	static public void  verifyTitle(WebDriver driver, String expectedTitle) {
+	static public void verifyTitle(WebDriver driver, String expectedTitle) {
 		String actualTitle = driver.getTitle();
 		if (actualTitle.equals(expectedTitle)) {
 			System.out.println("Pass");
@@ -28,12 +30,18 @@ public class PredefinedActions {
 			System.out.println("Fail");
 		}
 	}
-	
+
 	final static public void closeBrowser() {
 		driver.close();
 	}
-	
-	final static public void quitBrowser() {
+
+	final static public void closeAllBrowsers() {
 		driver.quit();
+	}
+	
+	// method to scroll untill element is visible
+	static public void scrollTillElement(WebElement element) {
+		JavascriptExecutor je = (JavascriptExecutor) driver;
+		je.executeScript("arguments[0].scrollIntoView();", element);
 	}
 }
