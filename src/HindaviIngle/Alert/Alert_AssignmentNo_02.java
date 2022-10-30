@@ -10,14 +10,14 @@
 7. Validate that "You successfully clicked on it" message is displayed
 8. Accept the alert
  */
-package HindaviIngle;
+package HindaviIngle.Alert;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class AssignmentNo_02 {
+public class Alert_AssignmentNo_02 {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
