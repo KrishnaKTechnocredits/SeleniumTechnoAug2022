@@ -2,19 +2,18 @@
 Verifiy Alert functionality on automationbykrishna application.
  */
 
-package deepakPatil.Assignment3AlertHandle2;
+package deepakPatil.assignment3AlertHandle2;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import deepakPatil.Base.PredefinedActions;
+import deepakPatil.base.StartupActions;
 
 public class AlertHandle2 {
 	
 	public static void main(String[] args) throws InterruptedException {
 		
-		WebDriver driver= PredefinedActions.start("http://automationbykrishna.com");
+		WebDriver driver= StartupActions.launch("http://automationbykrishna.com");
 		
 		driver.findElement(By.xpath("//a[@id='basicelements']")).click();
 		Thread.sleep(2000);

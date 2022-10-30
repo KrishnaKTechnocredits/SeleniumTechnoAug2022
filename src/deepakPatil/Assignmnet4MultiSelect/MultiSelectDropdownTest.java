@@ -14,7 +14,7 @@ print all selected option's text.
 output : 1235
  */
 
-package deepakPatil.Assignmnet4MultiSelect;
+package deepakPatil.assignmnet4MultiSelect;
 
 import java.util.List;
 
@@ -23,15 +23,14 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
-import deepakPatil.Base.PredefinedActions;
+import deepakPatil.base.StartupActions;
 
 public class MultiSelectDropdownTest {
 
 	public static void main(String[] args) throws InterruptedException {
 
 		System.out.println("--Go to Automationbykrishna.com--");
-		WebDriver driver = PredefinedActions.start("http://automationbykrishna.com/");
+		WebDriver driver = StartupActions.launch("http://automationbykrishna.com/");
 
 		System.out.println("--Go to Basic Element and perform below step on multi select dropdown--");
 		driver.findElement(By.xpath("//a[@id='basicelements']")).click();
