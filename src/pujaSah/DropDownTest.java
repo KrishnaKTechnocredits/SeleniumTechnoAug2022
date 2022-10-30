@@ -47,8 +47,6 @@ class DropDownTest{
 			System.out.println("PASS");
 		}
 		
-		
-		
 		WebElement multiSelectElement = driver.findElement(By.xpath("//div[@class='panel-body']//div[3]//select[2]"));
 		Select multiSelectDropdown = new Select(multiSelectElement);
 		
