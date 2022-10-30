@@ -48,18 +48,26 @@ public class SeleniumAssignment3 {
 
 		System.out.println("Step - Click on javascript Confirmation button");
 		driver.findElement(By.xpath("//button[@id = \'javascriptConfirmBox\']")).click();
-		Alert alertJavaScript = driver.switchTo().alert();
 
 		System.out.println("Verify - alert title");
-		verifyText(alertJavaScript, "Are you are doing your homework regularly, Press Okay else Cancel!!");
+		verifyText(alert, "Are you are doing your homework regularly, Press Okay else Cancel!!");
 		alert.accept();
-			
+
 		System.out.println("Step - Click on JavaScript Prompt button");
 		driver.findElement(By.xpath("//button[@id = 'javascriptPromp']")).click();
-		Alert alert3 = driver.switchTo().alert();
-		verifyText(alert3,"Please enter your name :");
-		//alert3.sendKeys("Saroj");
-		driver.switchTo().alert().sendKeys("saroj");
-	}
+		verifyText(alert, "Please enter your name :");
+		String name = "Saroj";
+		alert.sendKeys(name);
+		Thread.sleep(3000);
+		alert.accept();
+		// System.out.println("Filled name is: "+name);
+		String alertMessage = driver.findElement(By.xpath("//p[@id='pgraphdemo']")).getText();
+		System.out.println(alertMessage);
+		if (alertMessage.contains(name))
+			System.out.println("Test is Passed");
+		else
+			System.out.println("Test is Failed");
 
+		driver.close();
+	}
 }
