@@ -124,7 +124,6 @@ public class VerifyAlertFunctionality {
 			System.out.println("Fail");	
 		}
 		
-		
 		System.out.println("STEP 6: Click on Javascript Prompt button--------");
 		driver.findElement(By.xpath("//button[@id='javascriptPromp']")).click();
 		
