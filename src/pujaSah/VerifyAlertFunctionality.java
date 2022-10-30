@@ -1,3 +1,6 @@
+/*Assignment - 3 : 28th Oct'2022
+Verifiy Alert functionality on automationbykrishna application.*/
+
 package pujaSah;
 
 import org.openqa.selenium.Alert;
@@ -165,7 +168,6 @@ public class VerifyAlertFunctionality {
 		}else {
 			System.out.println("Fail");	
 		}
-		
 		
 		System.out.println("STEP 6: Click on Open MultiWindow button--------");
 		driver.findElement(By.xpath("//button[@id='javascriptMultiWindow']")).click();
