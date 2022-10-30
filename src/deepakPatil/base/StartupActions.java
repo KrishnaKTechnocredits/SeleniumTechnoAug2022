@@ -1,13 +1,13 @@
-package deepakPatil.Base;
+package deepakPatil.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class PredefinedActions {
+public class StartupActions {
 	
 	private static WebDriver driver;
 	
-	final static public WebDriver start(String URL) {
+	final static public WebDriver launch(String URL) {
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_106.exe");
 		System.out.println("--Launch Chrome Browser--");
 		driver = new ChromeDriver();
@@ -17,7 +17,7 @@ public class PredefinedActions {
 		return driver;
 	}
 	
-	final static public WebDriver start(){
+	final static public WebDriver launch(){
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_106.exe");
 		System.out.println("--Launch Chrome Browser--");
 		driver = new ChromeDriver();

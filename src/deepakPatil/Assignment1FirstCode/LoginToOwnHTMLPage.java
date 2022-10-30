@@ -13,15 +13,13 @@ Assignment No 1 : 23rd Oct 2022
 11.Verify html page is loaded again.
  */
 
-package deepakPatil.Assignment1FirstCode;
+package deepakPatil.assignment1FirstCode;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-
-import deepakPatil.Base.PredefinedActions;
+import deepakPatil.base.StartupActions;
 
 public class LoginToOwnHTMLPage {
 	
@@ -34,7 +32,7 @@ public class LoginToOwnHTMLPage {
 	
 	public static void main(String[] args) {
 		
-		WebDriver driver = PredefinedActions.start("file:///C:/Users/DELL/Desktop/Sample%20Form.html");
+		WebDriver driver = StartupActions.launch("file:///C:/Users/DELL/Desktop/Sample%20Form.html");
 		
 		System.out.println("3.Verify application is loaded successfully.");
 		String expectedTitle="TechnoCredits Sample HTML Page";
