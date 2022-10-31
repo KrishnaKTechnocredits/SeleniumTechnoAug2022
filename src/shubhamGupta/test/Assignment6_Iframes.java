@@ -1,15 +1,41 @@
 package shubhamGupta.test;
 
 import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.testng.annotations.*;
-
 import shubhamGupta.base.PredefinedActions;
 
-public class Assignment6_Iframes1 {
+/*Assignment No 6 : 31st Oct 2022
+
+Script 1
+
+1. Launch chrome browser
+2. Hit url(http://automationbykrishna.com/)in browser.
+3. Click on iFrame tab
+4. Switch to the first frame & click on top right button & print the options
+	About
+	Downloads
+	Documentations
+	Project
+	Support
+	Blog
+5. Switch back to main window
+---------------------------------------------------------------
+Script 2
+
+1. Launch chrome browser
+2. Hit url(http://automationbykrishna.com/)in browser.
+3. Click on iFrame tab
+4. Switch to the 3rd frame & click on Projects tab
+5. print the 
+	Projects
+	Apache Ant Libraries
+	Apache Ivy
+	Apache IvyDE
+	Apache EasyAnt
+5. Switch back to main window
+*/
+public class Assignment6_Iframes {
 
 	WebDriver driver;
 
@@ -61,12 +87,12 @@ public class Assignment6_Iframes1 {
 	public void getAllOptionsFrom2ndframe() throws InterruptedException {
 		WebElement frame3 = driver.findElement(By.xpath("//iframe[@title='site3']"));
 
-		System.out.println("Step 3: Scroll till alert option is visible");
+		System.out.println("Step3: Scroll till alert option is visible");
 		PredefinedActions.scrollTillElement(frame3);
 
 		System.out.println("Step4: Switch to frame 3 ");
 
-		System.out.println("Step 5: Scroll till alert option is visible");
+		System.out.println("Step5: Scroll till alert option is visible");
 		PredefinedActions.scrollTillElement(frame3);
 
 		// Switching to frame 3
@@ -78,20 +104,28 @@ public class Assignment6_Iframes1 {
 		System.out.println("Step4: Clicking on project button");
 		driver.findElement(By.xpath("//table[@summary='tab bar']/tbody/tr//table[@summary='non selected tab']"))
 				.click();
-		System.out.println("    Click on button is successful");
+		System.out.println("	Click on button is successful");
 		Thread.sleep(2000);
 
 		System.out.println("Step5: Getting all options present in frame");
 
 		// Printing all options present on list.
-		List<WebElement> optionsOnFrame = driver
-				.findElements(By.xpath("//div[@class='menucontainer']//ul/li[@class='menuheader']/ul/descendant::li"));
-		System.out.println("    Options present under frame are- ");
-
-		for (WebElement element : optionsOnFrame) {
+		List<WebElement> contents = driver
+				.findElements(By.xpath("//div[@class='menucontainer']//ul/li[@class='menuheader']"));
+		for (WebElement element : contents) {
 			System.out.println("      " + element.getText());
 			Thread.sleep(1000);
 		}
+
+		/*
+		 * List<WebElement> optionsOnFrame = driver .findElements(By.xpath(
+		 * "//div[@class='menucontainer']//ul/li[@class='menuheader']/ul/descendant::li"
+		 * )); System.out.println("    Options present under frame are- ");
+		 * 
+		 * for (WebElement element : optionsOnFrame) { System.out.println("      " +
+		 * element.getText()); Thread.sleep(1000); }
+		 */
+		
 		// Switch to main window
 		driver.switchTo().parentFrame();
 		System.out.println("Switched to parent window.");
