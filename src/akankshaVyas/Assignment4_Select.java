@@ -26,6 +26,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import akankshaVyas.base.PredefinedActions;
+
 public class Assignment4_Select {
 
 	@Test
@@ -111,13 +113,10 @@ public class Assignment4_Select {
 		listOfOptions = sel.getAllSelectedOptions();
 		for (WebElement e : listOfOptions)
 			System.out.println(e.getText());
-	
-
-	driver.close();
 	}
-	public static void main(String[] args) throws InterruptedException {
-		Assignment4_Select ass = new Assignment4_Select();
-		ass.testCase4();
+
+	public void closeingBrowser() {
+		PredefinedActions.closeBrowser();
 	}
 	
 }
