@@ -14,7 +14,7 @@ print all selected option's text.
 output : 1235
  */
 
-package deepakPatil.assignmnet4MultiSelect;
+package deepakPatil.assignment4MultiSelect;
 
 import java.util.List;
 
