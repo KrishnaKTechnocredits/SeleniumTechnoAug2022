@@ -1,6 +1,8 @@
 package akankshaVyas.base;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class PredefinedActions {
@@ -20,7 +22,16 @@ public class PredefinedActions {
 		return driver;
 	}
 
-	final static public void closeBrowser() {
+		static void scrollToElement(WebElement element){
+		JavascriptExecutor je = (JavascriptExecutor)driver;
+		je.executeScript("arguments[0].scrollIntoView(true)", element);
+	}
+	
+	static void closeBrowser() {
 		driver.close();
+	}
+	
+	public static void closeAllBrowser() {
+		driver.quit();
 	}
 }
