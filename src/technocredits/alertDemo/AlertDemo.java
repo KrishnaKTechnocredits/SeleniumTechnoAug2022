@@ -44,5 +44,4 @@ public class AlertDemo {
 		}
 		alert.dismiss();
 	}
-
 }

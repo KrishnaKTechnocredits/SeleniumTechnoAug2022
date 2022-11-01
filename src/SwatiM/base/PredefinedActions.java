@@ -1,6 +1,8 @@
 package SwatiM.base;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class PredefinedActions {
@@ -31,8 +33,23 @@ public class PredefinedActions {
 			return driver;
 		}
 
+		final static public void scrollViewToElement(WebElement element) {
+			JavascriptExecutor je = (JavascriptExecutor) driver;
+			je.executeScript("arguments[0].scrollIntoView(true);", element);
+		}
+		
 		final static public void closeBrowser() {
 			driver.close();
+		}
+		
+		final static public void closeAllBrowsers() {
+			driver.quit();
+		}
+		
+		// method to scroll untill element is visible
+		static public void scrollTillElement(WebElement element) {
+			JavascriptExecutor je = (JavascriptExecutor) driver;
+			je.executeScript("arguments[0].scrollIntoView();", element);
 		}
 
 	}
