@@ -33,6 +33,11 @@ public class PredefinedActions {
 			return driver;
 		}
 
+		final static public void scrollViewToElement(WebElement element) {
+			JavascriptExecutor je = (JavascriptExecutor) driver;
+			je.executeScript("arguments[0].scrollIntoView(true);", element);
+		}
+		
 		final static public void closeBrowser() {
 			driver.close();
 		}
