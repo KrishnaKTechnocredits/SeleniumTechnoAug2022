@@ -13,7 +13,7 @@ Test Case: To Handle Alert & Validate that "You successfully clicked on it" mess
 8. Accept the alert
  * *********/
 
-package AMohini.AlertAssign2;
+package AMohini.Alert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -36,11 +36,11 @@ public class AlertHandel {
 		 ***********/
 
 		driver.findElement(By.id("basicelements")).click();
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		String emailAddress = "Mohinih.agarwal@gmail.com";
 		String password = "Apple@123";
 		driver.findElement(By.id("exampleInputEmail1")).sendKeys(emailAddress);
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		driver.findElement(By.id("pwd")).sendKeys(password);
 		/******
 		 * driver.findElement(By.id("h4")).click();
@@ -52,7 +52,7 @@ public class AlertHandel {
 		 *********/
 
 		driver.findElement(By.id("submitb2")).click();
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		String Expected = "You successfully clicked on it";
 		String Actual = driver.switchTo().alert().getText();
 		if (Expected.equals(Actual)) {
@@ -62,7 +62,7 @@ public class AlertHandel {
 			System.out.println("Testcase Failed");
 		}
 		driver.switchTo().alert().accept();
-		Thread.sleep(2);
+		//Thread.sleep(2);
 		driver.quit();
 
 	}
