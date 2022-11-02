@@ -1,12 +1,14 @@
 /*Assignment - 3 : 28th Oct'2022
 Verifiy Alert functionality on automationbykrishna application.*/
 
-package pujaSah;
+package pujaSah.AlertTest;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import pujaSah.Base.PredefinedActions;
 
 public class VerifyAlertFunctionality {
 
