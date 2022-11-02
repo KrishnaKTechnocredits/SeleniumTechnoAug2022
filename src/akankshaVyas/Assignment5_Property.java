@@ -61,7 +61,7 @@ void m1() {
 		driver.findElement(By.xpath("(//div[@class='_6ltg'])[2]/a")).click();
 		
 		//property file path
-		PropertiesFileReader propertiesFileReader = new PropertiesFileReader("src/akankshaVyas/Akanksha.Properties");
+		PropertiesFileReader propertiesFileReader = new PropertiesFileReader("src/akankshaVyas/Akanksha._Prop.properties");
 		
 		//Thread.sleep(5000);
 		System.out.println("STEP - Enter fname,surname,email and password");
