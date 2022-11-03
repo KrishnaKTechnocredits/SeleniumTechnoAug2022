@@ -27,7 +27,7 @@ public class PredefinedActions {
 		je.executeScript("arguments[0].scrollIntoView(true)", element);
 	}
 	
-	static void closeBrowser() {
+	public static void closeBrowser() {
 		driver.close();
 	}
 	
