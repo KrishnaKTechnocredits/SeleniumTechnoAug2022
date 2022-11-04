@@ -29,6 +29,16 @@ public class BasicForms {
 		System.out.println("STEP2: Hit url");
 		driver.get("http://automationbykrishna.com/#");
 		
+		System.out.println("VERIFY- Application is loaded and Title is PujaSah-Technocredits:");
+		String expectedTitle = "PujaSah - Technocredits";
+		String actualTitle = driver.getTitle();
+		if(expectedTitle.equals(actualTitle)) {
+			System.out.println("Pass \n");
+		}
+		else {
+			System.out.println("Fail \n");	
+		}
+		
 		System.out.println("STEP3: Click on Basic Elements link.");
 		driver.findElement(By.id("basicelements")).click();
 			

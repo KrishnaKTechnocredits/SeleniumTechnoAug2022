@@ -12,7 +12,7 @@ print all selected option's text.
 
 output : 1235*/
 
-package pujaSah;
+package pujaSah.DropDownMethods;
 
 import java.util.List;
 
@@ -21,6 +21,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import pujaSah.Base.PredefinedActions;
 
 class DropDownTest{
 
