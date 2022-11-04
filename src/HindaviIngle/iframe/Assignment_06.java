@@ -48,27 +48,27 @@ public class Assignment_06 {
 	WebDriver driver;
 	@BeforeMethod
 	void beforeMethod() throws InterruptedException {
-		System.out.println("STEP1:Navigate to automationbykrishna.com");
 		driver=PredefinedActions.start("http://automationbykrishna.com/");
-		System.out.println("STEP 2- Click on iFrame tab");
+		System.out.println("STEP2:Navigate to automationbykrishna.com");
+		System.out.println("STEP 3- Click on iFrame tab");
 		driver.findElement(By.xpath("//a[@id='iframes']")).click();
 		Thread.sleep(2000);
 	}
 	@Test
 	
 	void iframe1Assignment01() throws InterruptedException {
-		System.out.println("STEP 3- Switch to the first frame");
+		System.out.println("STEP 4- Switch to the first frame");
 
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@name='site1']")));
 		Thread.sleep(7000);
 		
-		System.out.println("STEP 4- Click on top right button ");
+		System.out.println("STEP 5- Click on top right button ");
 
 		WebElement element=driver.findElement(By.xpath("//button//span[@class='navbar-toggler-icon']"));
 		element.click();
 		Thread.sleep(5000);
 		//String label=element.getText();
-		System.out.println("STEP5:List of Actions:");
+		System.out.println("STEP6 :List of Actions:");
 
 		List<WebElement> listOfElement = driver.findElements(By.xpath("//div[@id ='main_navbar']//li/a"));
 		//System.out.println("--->"+listOfElement.toString());
@@ -78,26 +78,25 @@ public class Assignment_06 {
 		}
 		Thread.sleep(3000);
 		
-		System.out.println("STEP6 - Switch back to main window");
+		System.out.println("STEP7 - Switch back to main window");
 		driver.switchTo().parentFrame();
 		System.out.println("Main window --->"+driver.getTitle());
 
 		driver.close();
-		
-		
+			
 	}
 	@Test
 	void iframe3Assignment01() throws InterruptedException {
-		System.out.println("STEP 1- Switch to the third frame");
+		System.out.println("STEP 3- Switch to the third frame");
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title='site3']")));
 		
 		Thread.sleep(4000);
-		System.out.println("STEP 2- Click on project tab");
+		System.out.println("STEP 4- Click on project tab");
 		driver.findElement(By.xpath("//font[text()='Projects']")).click();
 		Thread.sleep(5000);
 
 		
-		System.out.println("STEP 3- Print options from project tab");
+		System.out.println("STEP 5- Print options from project tab");
 
 		List<WebElement> listOfMenu=driver.findElements(By.xpath("//li[@class='menuheader']"));
 		
@@ -106,10 +105,12 @@ public class Assignment_06 {
 			System.out.println(element.getText());
 		}
 		
-		System.out.println("STEP 4- Switch back to main window");
+		System.out.println("STEP 6- Switch back to main window");
 		driver.switchTo().parentFrame();
+		
 		System.out.println("Main window --->"+driver.getTitle());
 		
+		driver.quit();
 		
 
 	}
