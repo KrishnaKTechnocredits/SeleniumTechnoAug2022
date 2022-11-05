@@ -39,7 +39,7 @@ WebDriver driver;
 	}
 	
 	@Test
-	void testCaseMouseHover() throws InterruptedException {
+	void testCaseMouseHover() {
 		
 	
 		System.out.println("Step :Click on cross button on loginclick ");
