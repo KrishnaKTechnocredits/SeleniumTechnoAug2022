@@ -22,7 +22,7 @@ public class PredefinedActions {
 		return driver;
 	}
 
-		static void scrollToElement(WebElement element){
+	public	static void scrollToElement(WebElement element){
 		JavascriptExecutor je = (JavascriptExecutor)driver;
 		je.executeScript("arguments[0].scrollIntoView(true)", element);
 	}
