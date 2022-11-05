@@ -81,13 +81,13 @@ public class IframeTest {
 	Thread.sleep(2000);
 }
 	@Test
-	public void iFrame3rd() throws InterruptedException {
+	public void iFrame() throws InterruptedException {
 		System.out.println("Step - switch to third Iframe ");
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title='site3']")));
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 		System.out.println("Click on Projects tab in frame 3");
-		driver.findElement(By.xpath("//a[@href='./projects/index.html']")).click();
-		Thread.sleep(20000);
+		driver.findElement(By.xpath("//a[@href='./projects/index.html']//font[text()='Projects']")).click();
+		Thread.sleep(30000);
 		List<WebElement> projects = driver.findElements(By.xpath("//div[@class='menucontainer']//li[@class='menuheader']"));
 		System.out.println("Print the project name");
 		for(WebElement project :projects) {
