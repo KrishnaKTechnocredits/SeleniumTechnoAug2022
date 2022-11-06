@@ -18,7 +18,7 @@ public class PredefinedActions {
 	//OR
 	
 	final static public WebDriver start() {
-		return start("http://automationpractice.com/");
+		return start("http://automationbykrishna.com/");
 	}
 	
 	final static public WebDriver start(String url) {
