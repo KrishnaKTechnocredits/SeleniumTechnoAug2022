@@ -1,6 +1,8 @@
 package harshalRane.base;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class PredefinedActions {
@@ -18,7 +20,7 @@ public class PredefinedActions {
 	//OR
 	
 	final static public WebDriver start() {
-		return start("http://automationpractice.com/");
+		return start("http://automationbykrishna.com/");
 	}
 	
 	final static public WebDriver start(String url) {
@@ -28,6 +30,11 @@ public class PredefinedActions {
 		driver.get(url);
 		driver.manage().window().maximize();
 		return driver;
+	}
+	
+	final static public void scrollToElement(WebElement element) {
+		JavascriptExecutor je = (JavascriptExecutor) driver;
+		je.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 	
 	final static public void closeBrowser() {
