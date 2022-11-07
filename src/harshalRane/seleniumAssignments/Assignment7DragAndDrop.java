@@ -1,5 +1,7 @@
 package harshalRane.seleniumAssignments;
 
+import java.util.List;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -61,6 +63,37 @@ public class Assignment7DragAndDrop {
 
 		System.out.println("STEP6: Accept the alert");
 		alert.accept();
+	}
+	
+	@Test
+	void mouseHoverOnFlipkart() throws InterruptedException {
+		driver = PredefinedActions.start("https://www.flipkart.com/");
+		Thread.sleep(5000);
+		
+		System.out.println("Step2: Click on cross button on login");
+		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
+		
+		System.out.println("Step3: Mouse hover on Fashion Icon");
+		Actions actions = new Actions(driver);
+		actions.moveToElement(driver.findElement(By.xpath("(//div[@class='xtXmba'])[4]"))).build().perform();
+		
+		System.out.println("Step4: Validate that menu is displayed");
+		int totalCount = driver.findElements(By.xpath("//a[@class='_6WOcW9']")).size();
+		
+		if(totalCount > 0) {
+			System.out.println("Menu is displayed");
+		}else {
+			System.out.println("Menu is not displayed");
+		}
+		Thread.sleep(3000);
+		
+		System.out.println("STEP 5: Print each sections subsection count");
+		List<WebElement> sections = driver.findElements(By.xpath("//div[@class='_3XS_gI _7qr1OC']/a"));
+		for(WebElement e : sections) {
+			List<WebElement> subsection = driver.findElements(By.xpath("//div[@class='_3XS_gI']/a"));
+			System.out.println(" " + e.getText() + " " + subsection.size());
+		}
+		Thread.sleep(2000);
 	}
 	
 	@AfterMethod
