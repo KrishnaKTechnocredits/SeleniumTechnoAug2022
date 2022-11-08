@@ -6,14 +6,17 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import rashmiG.Base.PredefinedActions;
 import rashmiG.utils.PropertiesFileReader;
 
@@ -93,5 +96,10 @@ public class Assignment9fileupload {
 		String expectedAddedBy="Rashmi Ganachari";
 		Assert.assertEquals(actualAddedBy, expectedAddedBy);
 		System.out.println("PASS - file is added by "+actualAddedBy);
+	}
+	
+	@AfterMethod
+	public void tearDown() {
+		PredefinedActions.closeBrowser();
 	}
 }
