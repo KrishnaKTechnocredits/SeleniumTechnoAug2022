@@ -84,8 +84,6 @@ public class Assignment9 {
 		String renewalOn = driver.findElement(By.cssSelector("div#displayAbout>div:nth-child(2)>form>div>div>div>div:nth-child(5)")).getText();
 		
 		String expcompanyDetails = prop.getValue("companyDetails");
-		System.out.println(expcompanyDetails);
-		System.out.println(companyDetails);
 		String expversion = prop.getValue("version");
 		String expuser = prop.getValue("users");
 		String exprenewalOn = prop.getValue("renewalOn");
