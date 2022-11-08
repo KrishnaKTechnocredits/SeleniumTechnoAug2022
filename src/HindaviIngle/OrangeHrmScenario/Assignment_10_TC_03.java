@@ -65,7 +65,7 @@ public class Assignment_10_TC_03 {
 		System.out.println("Step4 Verify User profile is displayed");
 		WebElement profileName = driver.findElement(By.xpath("//a[text()='Reyaansh ingle']"));
 		if (profileName.isDisplayed() == true) {
-			System.out.println("Profile name displaying correct");
+			System.out.println("Profile name displayed correctly");
 
 		} else {
 			System.out.println("Incorrect Profile name");
@@ -76,8 +76,6 @@ public class Assignment_10_TC_03 {
 		Actions action = new Actions(driver);
 		action.moveToElement(driver.findElement(By.xpath("//div[@id='sidebar-profile-picture']"))).build().perform();
 		driver.findElement(By.xpath("//a[@class='password-action profile-context-menu-handler']")).click();
-
-		System.out.println("Step5: Verify user menu total 2 options displayed");
 
 		int expectedOptions = 2;
 		int actualOptions = driver.findElements(By.xpath("//div[@class='sub-menu-container-php profile-context-menu-handler opened']/div/div")).size();
