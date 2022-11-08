@@ -6,9 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class CommonMethods {
 	
 	static  WebDriver driver;
-	static final WebDriver openBrowser(String url) throws InterruptedException{
-		System.setProperty(":webdriver.chrome.driver",
-				"D:\\TechnoCredits\\SeleniumTechnoAug2022\\drivers\\chromedriver_106.exe, null");
+	public static final WebDriver openBrowser(String url) throws InterruptedException{
+		System.setProperty("webdriver.chrome.driver",
+				"D:\\TechnoCredits\\SeleniumTechnoAug2022\\drivers\\chromedriver_106.exe");
 		System.out.println("Step - Launch chrome browser");
 		driver=new ChromeDriver();
 		driver.get(url);
