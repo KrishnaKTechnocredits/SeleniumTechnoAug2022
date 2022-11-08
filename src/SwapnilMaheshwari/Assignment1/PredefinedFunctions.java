@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class PredefinedFunctions {
 
-	final static WebDriver browserOpen() {
+	public final static WebDriver browserOpen() {
 		System.setProperty("webdriver.chrome.driver",
 				"D:\\TechnoCredits\\SeleniumTechnoAug2022\\drivers\\chromedriver_106.exe");
 		System.out.println("Step -Launch chrome browser");
