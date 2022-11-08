@@ -1,6 +1,4 @@
-
-
-package akankshaVyas.base;
+package nilamP.orangeHRM;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,11 +6,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class PropertiesFileReader {
-
+public class PropertiesReadFile {
 	Properties prop;
-	public PropertiesFileReader (String filePath ) {
-		
+	public PropertiesReadFile (String filePath ) {
+
 			prop = new Properties();
 			try {
 				File file = new File(filePath);
@@ -28,5 +25,4 @@ public class PropertiesFileReader {
 		public String getValue(String key) {
 			return prop.getProperty(key);
 		}
-	}
-
+}
