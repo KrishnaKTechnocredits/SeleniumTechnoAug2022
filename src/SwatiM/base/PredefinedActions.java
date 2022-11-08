@@ -31,6 +31,7 @@ public class PredefinedActions {
 			driver.get(url);
 			driver.manage().window().maximize();
 			return driver;
+			
 		}
 
 		final static public void scrollViewToElement(WebElement element) {
@@ -40,17 +41,7 @@ public class PredefinedActions {
 		
 		final static public void closeBrowser() {
 			driver.close();
+			//System.out.println("new changes for git stash");
 		}
-		
-		final static public void closeAllBrowsers() {
-			driver.quit();
-		}
-		
-		// method to scroll untill element is visible
-		static public void scrollTillElement(WebElement element) {
-			JavascriptExecutor je = (JavascriptExecutor) driver;
-			je.executeScript("arguments[0].scrollIntoView();", element);
-		}
-
-	}
+			}
 
