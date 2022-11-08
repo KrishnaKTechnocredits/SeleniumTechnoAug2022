@@ -29,11 +29,15 @@ public class PredefinedActions {
 			driver.get(url);
 			driver.manage().window().maximize();
 			return driver;
+			
 		}
 
 		final static public void closeBrowser() {
 			driver.close();
+			//System.out.println("new changes for git stash");
 		}
+		
+		
 
 	}
 
