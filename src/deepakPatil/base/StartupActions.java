@@ -22,6 +22,7 @@ public class StartupActions {
 		System.out.println("--Launch Chrome Browser--");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		driver.get("http://automationbykrishna.com/");
 		return driver;
 	}
 

@@ -48,7 +48,7 @@ public class DropdownMethodTest {
 		for (WebElement e : listOfOptions) {
 			int num = Integer.parseInt(e.getText());
 			if (num % 2 == 0)
-				multiSelectDD.selectByVisibleText(e.getText());
+				multiSelectDD.selectByVisibleText(e.getText());	
 		}
 
 		/*

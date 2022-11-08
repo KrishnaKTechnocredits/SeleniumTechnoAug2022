@@ -17,7 +17,7 @@ public class PredifinedAction {
 	 final static public WebDriver start(String url) {
 		System.out.println("Step 1 --> Launch crome browser");
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_106.exe");
-		WebDriver driver=new ChromeDriver();
+		driver=new ChromeDriver();
 		driver.get("url");
 		driver.manage().window().maximize();
 		return driver;
