@@ -10,7 +10,7 @@ public class PredefinedActions {
 	private static WebDriver driver;
 
 	final static public WebDriver start() {
-		return start("http://automationpractice.com/");
+		return start("http://automationbykrishna.com/#");
 	}
 
 	final static public WebDriver start(String url) {
@@ -22,7 +22,8 @@ public class PredefinedActions {
 		return driver;
 	}
 
-	public	static void scrollToElement(WebElement element){
+		public static void scrollToElement(WebElement element){
+
 		JavascriptExecutor je = (JavascriptExecutor)driver;
 		je.executeScript("arguments[0].scrollIntoView(true)", element);
 	}
