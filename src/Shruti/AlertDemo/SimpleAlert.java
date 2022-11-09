@@ -19,6 +19,7 @@ public class SimpleAlert {
 		Thread.sleep(2000);
 		System.out.println("Step4: Switch to Alert ");
 		Alert alert = driver.switchTo().alert();
+		Thread.sleep(2000);
 		String expectedTxt = "You must be TechnoCredits student!!";
 		System.out.println("Step5: Verify Alert text is as per Expected ");
 		System.out.println(" Get the actual text ");
