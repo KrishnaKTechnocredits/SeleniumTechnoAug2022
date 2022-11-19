@@ -14,6 +14,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -48,6 +49,7 @@ public class VerifyHRAdminUserRoles {
 		System.out.println("Step: Click on Login button");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		
+		System.out.println("Click on HR Administration tab from left panel");
 		List<WebElement> list1 = driver.findElements(By.xpath("//div[@id='menu-content']/ul/li[@data-level='2']"));
 		list1.get(0).click();
 		
@@ -55,9 +57,17 @@ public class VerifyHRAdminUserRoles {
 		driver.findElement(By.xpath("//top-level-menu-item[@automation-id='menu_admin_viewUserRoles']//a[text()='Manage User Roles ']")).click();
 		
 		System.out.println("Step: Verify by default 50 records are present in the table");
-		PredefinedActions.scrollToElement(driver.findElement(By.xpath("//div[@class='select-wrapper']//span[text()='50']")));
+//		PredefinedActions.scrollToElement(driver.findElement(By.xpath("//div[@class='select-wrapper']//span[text()='50']")));
+		PredefinedActions.scrollToElement(driver.findElement(By.xpath("//div[@class='select-wrapper']//input")));
 		//driver.findElement(By.xpath("//div[@class='select-wrapper']//span[text()='50']")).click();
-		System.out.println(driver.findElement(By.xpath("//div[@class='select-wrapper']//span[text()='50']")).getText());
+//		System.out.println(driver.findElement(By.xpath("//div[@class='select-wrapper']//input")).getAttribute("value"));
+		String defaultCount = driver.findElement(By.xpath("//div[@class='select-wrapper']//input")).getAttribute("value");
+		Assert.assertTrue(Integer.parseInt(defaultCount) == 50, "Default count is: " + defaultCount);
+		
+		System.out.println("Verify total record and showing count of record in right corner of page");
+		List<WebElement> totalRows = driver.findElements(By.xpath("//list[@listData='listData']//tbody//tr"));
+		Assert.assertTrue(totalRows.size() == 9);
+		Assert.assertTrue(driver.findElement(By.cssSelector(".summary")).isDisplayed());
 	}
 	
 	@AfterMethod
