@@ -45,6 +45,7 @@ public class Assignment2_WindAlert {
 			Thread.sleep(3000);
 			driver.close();
 
+			// System.out.println("Testing stash ");
 		}
 	}
 }

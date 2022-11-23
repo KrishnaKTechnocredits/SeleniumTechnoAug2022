@@ -18,7 +18,7 @@ public class PredifinedAction {
 		System.out.println("Step 1 --> Launch crome browser");
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver_106.exe");
 		driver=new ChromeDriver();
-		driver.get("url");
+		driver.get(url);
 		driver.manage().window().maximize();
 		return driver;
 	}
@@ -34,6 +34,6 @@ public class PredifinedAction {
 	 
 	 final public static void scrollviewToElement(WebElement element) {
 		 JavascriptExecutor je=(JavascriptExecutor)driver;
-		 je.executeScript("arguments[0].scrollIntoView", element);
+		 je.executeScript("arguments[0].scrollIntoView(true)", element);
 	 }
 }

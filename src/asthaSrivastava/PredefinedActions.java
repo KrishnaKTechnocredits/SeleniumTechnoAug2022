@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class PredefinedActions {
+	private static WebDriver driver;
 	
 	private static WebDriver driver;
 		
@@ -35,3 +36,4 @@ public class PredefinedActions {
 			driver.quit();
 		}
 	}
+
