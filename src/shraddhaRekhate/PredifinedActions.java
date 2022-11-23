@@ -1,5 +1,7 @@
 package shraddhaRekhate;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 public class PredifinedActions {
 	//overloaded methods without parameter
@@ -17,4 +19,10 @@ public class PredifinedActions {
 			driver.manage().window().maximize();//maximize browser
 			return driver;
 	}
+	
+//	  final public static void scrollToElement(WebElement element) {
+//		  Webdriver driver;
+//		  JavascriptExecutor js = (JavascriptExecutor)driver;
+//		  js.executeScript(null, null)
+//		}
 }
